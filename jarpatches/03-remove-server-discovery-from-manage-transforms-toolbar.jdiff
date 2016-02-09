@@ -1,0 +1,15 @@
+target: com/paterva/maltego/transform/manager/TasManagerTopComponent.class
+--- TasManagerTopComponent.j.orig	2012-12-14 20:20:34.939828853 -0200
++++ TasManagerTopComponent.j	2012-12-14 20:21:28.575830690 -0200
+@@ -161,11 +161,6 @@
+   aload_0
+   invokespecial com/paterva/maltego/transform/manager/TasManagerTopComponent$1/<init>(Lcom/paterva/maltego/transform/manager/TasManagerTopComponent;)V
+   invokevirtual org/openide/explorer/ExplorerManager/addPropertyChangeListener(Ljava/beans/PropertyChangeListener;)V
+-  aload_0
+-  getfield com/paterva/maltego/transform/manager/TasManagerTopComponent/_view Lcom/paterva/maltego/util/ui/outline/OutlineViewPanel;
+-  aload_0
+-  invokespecial com/paterva/maltego/transform/manager/TasManagerTopComponent/getDiscoverActionWrapperInstance()Lcom/paterva/maltego/transform/manager/TasManagerTopComponent$DiscoverActionWrapper;
+-  invokevirtual com/paterva/maltego/util/ui/outline/OutlineViewPanel/addToToolbarLeft(Ljavax/swing/Action;)V
+   return
+ .end method
+ 

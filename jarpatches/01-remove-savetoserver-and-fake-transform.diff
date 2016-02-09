@@ -1,0 +1,48 @@
+--- com/paterva/maltego/branding/layer.xml.orig	2012-03-13 11:12:50.000000000 -0300
++++ com/paterva/maltego/branding/layer.xml	2012-12-14 19:29:53.259724721 -0200
+@@ -13,30 +13,9 @@
+                 <attr name="selectionType" stringvalue="EXACTLY_ONE"/>
+                 <attr name="type" stringvalue="com.paterva.maltego.ui.graph.data.SaveAsCapable"/>
+             </file>
+-            <file name="com-paterva-maltego-branding-SaveToServerAction.instance"/>
+-        </folder>
+-        <folder name="Graph">
+-            <file name="com-paterva-maltego-branding-RunTransformTeaseAction.instance"/>
+         </folder>
+     </folder>
+     
+-    <folder name="Ribbon">
+-        <folder name="AppMenu">
+-            <file name="com-paterva-maltego-branding-SaveToServerAction.shadow">
+-                <attr name="originalFile" stringvalue="Actions/System/com-paterva-maltego-branding-SaveToServerAction.instance"/>
+-                <attr name="position" intvalue="450"/>
+-                <attr name="noIconInMenu" boolvalue="false"/>
+-                <attr name="iconBase" stringvalue="com/paterva/maltego/branding/SaveToServer.png"/>
+-            </file>
+-        </folder>
+-        <folder name="TaskBar">
+-            <file name="com-paterva-maltego-branding-SaveToServerAction.shadow">
+-                <attr name="originalFile" stringvalue="Actions/System/com-paterva-maltego-branding-SaveToServerAction.instance"/>
+-                <attr name="position" intvalue="500"/>
+-            </file>
+-        </folder>
+-    </folder>
+-
+     <folder name="Maltego">
+         <folder name="StartupWizard">
+             <file name="WelcomeScreenSegment.instance">
+@@ -50,14 +29,6 @@
+                 <attr name="ignoreIfAlone" boolvalue="true"/>
+             </file>
+         </folder>
+-        <folder name="ContextActions">
+-            <folder name="Entity">
+-                <file name="com-paterva-maltego-branding-RunTransformTeaseAction.shadow">
+-                    <attr name="originalFile" stringvalue="Actions/Graph/com-paterva-maltego-branding-RunTransformTeaseAction.instance"/>
+-                    <attr name="position" intvalue="100"/>
+-                </file>
+-            </folder>
+-        </folder>
+         <folder name="DetailView">
+             <file name="HTMLStyle" url="detailview/style.html"/>
+         </folder>

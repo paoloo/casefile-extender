@@ -1,0 +1,87 @@
+target: com/paterva/maltego/welcome/startpage/StartPageTopComponent.class
+--- StartPageTopComponent.j.orig	2012-12-14 19:54:57.843776232 -0200
++++ StartPageTopComponent.j	2012-12-14 19:58:35.991783698 -0200
+@@ -264,71 +264,12 @@
+ .method public componentOpened()V
+   .limit stack 6
+   .limit locals 4
+-  new java/lang/StringBuilder
+-  dup
+-  invokespecial java/lang/StringBuilder/<init>()V
+-  astore_1
+-  aload_1
+-  ldc "http://www.paterva.com/cgi-bin/splash.pl"
+-  invokevirtual java/lang/StringBuilder/append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+-  pop
+-  aload_1
+-  ldc "?branding="
+-  invokevirtual java/lang/StringBuilder/append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+-  pop
+-  aload_1
+-  ldc "maltego.branding-code"
+-  ldc ""
+-  invokestatic java/lang/System/getProperty(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+-  invokevirtual java/lang/StringBuilder/append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+-  pop
+-  aload_1
+-  ldc "&version="
+-  invokevirtual java/lang/StringBuilder/append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+-  pop
+-  aload_1
+-  ldc "maltego.version"
+-  ldc ""
+-  invokestatic java/lang/System/getProperty(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+-  invokevirtual java/lang/StringBuilder/append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+-  pop
+-  aload_1
+-  ldc "&build="
+-  invokevirtual java/lang/StringBuilder/append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+-  pop
+-  aload_1
+-  ldc "maltego.buildnumber"
+-  ldc ""
+-  invokestatic java/lang/System/getProperty(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+-  invokevirtual java/lang/StringBuilder/append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+-  pop
+-  aload_1
+-  ldc "&subtitle="
+-  invokevirtual java/lang/StringBuilder/append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+-  pop
+-  aload_1
+-  ldc "maltego.version-subtitle"
+   ldc ""
+-  invokestatic java/lang/System/getProperty(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+-  invokevirtual java/lang/StringBuilder/append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+-  pop
+-  aload_1
+-  ldc "&oem="
+-  invokevirtual java/lang/StringBuilder/append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+-  pop
+-  aload_1
+-  ldc "maltego.oem"
+-  ldc ""
+-  invokestatic java/lang/System/getProperty(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+-  invokevirtual java/lang/StringBuilder/append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+-  pop
+-  aload_1
+-  invokevirtual java/lang/StringBuilder/toString()Ljava/lang/String;
+   astore_2
+ Label115:
+   aload_0
+   getfield com/paterva/maltego/welcome/startpage/StartPageTopComponent/_statusLabel Ljavax/swing/JLabel;
+-  ldc "<html><center>Loading...</center></html>"
++  ldc "<html><center>Welcome to CaseFile</center></html>"
+   invokevirtual javax/swing/JLabel/setText(Ljava/lang/String;)V
+   aload_0
+   getfield com/paterva/maltego/welcome/startpage/StartPageTopComponent/_splitPane Ljavax/swing/JSplitPane;
+@@ -357,10 +298,6 @@
+   getfield com/paterva/maltego/welcome/startpage/StartPageTopComponent/_renderContext Lcom/paterva/maltego/welcome/startpage/StartPageRenderContext;
+   aload_0
+   invokevirtual com/paterva/maltego/welcome/startpage/StartPageRenderContext/addListener(Lcom/paterva/maltego/welcome/startpage/HtmlRenderListener;)V
+-  aload_0
+-  getfield com/paterva/maltego/welcome/startpage/StartPageTopComponent/_renderContext Lcom/paterva/maltego/welcome/startpage/StartPageRenderContext;
+-  aload_2
+-  invokevirtual com/paterva/maltego/welcome/startpage/StartPageRenderContext/showURL(Ljava/lang/String;)V
+ Label188:
+   goto Label196
+ Label191:

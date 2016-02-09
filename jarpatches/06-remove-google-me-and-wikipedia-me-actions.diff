@@ -1,0 +1,16 @@
+--- com/paterva/maltego/entities/common/maltego.Unknown.entity.orig	2012-03-13 11:12:34.000000000 -0300
++++ com/paterva/maltego/entities/common/maltego.Unknown.entity	2012-12-14 20:35:25.335859336 -0200
+@@ -1,13 +1,4 @@
+ <MaltegoEntity id="maltego.Unknown" displayName="Unknown" displayNamePlural="Unknowns" 
+ description="An entity of unknown type" 
+ largeIconResource="Unknown" allowedRoot="false" conversionOrder="2147483647" visible="false">
+-   <Actions>
+-      <Action displayName="Google Me!" name="maltego.spec.action.google" type="maltego.spec.action.type.browser">
+-         <Config><![CDATA[http://www.google.com/search?q=$urlencode("$value()")]]></Config>
+-      </Action>
+-      <Action displayName="Wikipedia Me!" name="maltego.spec.action.wikipedia" type="maltego.spec.action.type.browser">
+-         <Config><![CDATA[http://en.wikipedia.org/wiki/Special:Search?search=$urlencode("$value()")]]></Config>
+-      </Action>
+-      <Action displayName="Open all URLs" name="maltego.spec.action.browse-urls" type="maltego.spec.action.type.browse-urls"/>
+-   </Actions>
+ </MaltegoEntity>

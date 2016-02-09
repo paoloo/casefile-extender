@@ -42,3 +42,33 @@ The next step was define a series of modifications and fine tunning on CaseFile:
  9. enable transform limit toolbar
 
 For that, I've put all modifications in .diff, .jdiff or .java where .diff is applied by standard POSIX **patch** utility, .jdiff is recompiled with **jasmine** and .java is compiled with jdk's **javac** and integrated into target application.
+
+## Instructions:
+ * Run cfpatch:
+    ./cfpatch maltego-3.1.1_CE-2012-04-11.zip maltego-CF.1.0.1_community-2012-03-14.zip CF-custom.zip
+
+ * Extact CF-custom.zip to the place where you want to install the custom CaseFile.
+
+## Extra
+
+Create an .java file with the header:
+```
+//target-contains: com/paterva/maltego/graph/MaltegoGraph.class
+//filename: org/hopto/im/Test.java
+```
+to integrate a new piece of software on Casefile. Example:
+```
+//target-contains: com/paterva/maltego/graph/MaltegoGraph.class
+//filename: org/hopto/im/Test.java
+
+// the above lines are to indicate that this class will be added
+// in the same JAR module that file com/paterva/maltego/graph/MaltegoGraph.class
+// and that the original name of this file is org/hopto/im/Test.java
+
+package org.hopto.im;
+public class Test {
+    public static void main(String[] args) {
+        System.out.println("Hello");
+    }
+}
+```

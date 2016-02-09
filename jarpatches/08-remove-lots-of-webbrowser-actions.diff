@@ -1,0 +1,95 @@
+--- com/paterva/maltego/welcome/layer.xml.orig	2012-03-13 11:12:48.000000000 -0300
++++ com/paterva/maltego/welcome/layer.xml	2012-12-14 20:44:31.195878026 -0200
+@@ -3,48 +3,6 @@
+ <filesystem>
+     <folder name="Actions">
+         <folder name="Help">
+-            <file name="com-paterva-maltego-welcome-GotoUserGuideAction.instance">
+-                <attr name="delegate" newvalue="com.paterva.maltego.welcome.GotoUserGuideAction"/>
+-                <attr name="displayName" bundlevalue="com.paterva.maltego.welcome.Bundle#CTL_GotoUserGuideAction"/>
+-                <attr name="instanceCreate" methodvalue="org.openide.awt.Actions.alwaysEnabled"/>
+-                <attr name="iconBase" stringvalue="com/paterva/maltego/welcome/resources/Help.png"/>
+-                <attr name="noIconInMenu" boolvalue="false"/>
+-            </file>
+-            <file name="com-paterva-maltego-welcome-GotoTechSupportAction.instance">
+-                <attr name="delegate" newvalue="com.paterva.maltego.welcome.GotoTechSupportAction"/>
+-                <attr name="displayName" bundlevalue="com.paterva.maltego.welcome.Bundle#CTL_GotoTechSupportAction"/>
+-                <attr name="instanceCreate" methodvalue="org.openide.awt.Actions.alwaysEnabled"/>
+-                <attr name="iconBase" stringvalue="com/paterva/maltego/welcome/resources/Nurse.png"/>
+-                <attr name="noIconInMenu" boolvalue="false"/>
+-            </file>
+-            <file name="com-paterva-maltego-welcome-GotoBugsAction.instance">
+-                <attr name="delegate" newvalue="com.paterva.maltego.welcome.GotoBugsAction"/>
+-                <attr name="displayName" bundlevalue="com.paterva.maltego.welcome.Bundle#CTL_GotoBugsAction"/>
+-                <attr name="instanceCreate" methodvalue="org.openide.awt.Actions.alwaysEnabled"/>
+-                <attr name="iconBase" stringvalue="com/paterva/maltego/welcome/resources/Bug.png"/>
+-                <attr name="noIconInMenu" boolvalue="false"/>
+-            </file>
+-            <!--file name="com-paterva-maltego-welcome-GotoMailingListAction.instance">
+-                <attr name="delegate" newvalue="com.paterva.maltego.welcome.GotoMailingListAction"/>
+-                <attr name="displayName" bundlevalue="com.paterva.maltego.welcome.Bundle#CTL_GotoMailingListAction"/>
+-                <attr name="instanceCreate" methodvalue="org.openide.awt.Actions.alwaysEnabled"/>
+-                <attr name="iconBase" stringvalue="com/paterva/maltego/welcome/resources/MailingList.png"/>
+-                <attr name="noIconInMenu" boolvalue="false"/>
+-            </file-->
+-            <file name="com-paterva-maltego-welcome-GotoBlogAction.instance">
+-                <attr name="delegate" newvalue="com.paterva.maltego.welcome.GotoBlogAction"/>
+-                <attr name="displayName" bundlevalue="com.paterva.maltego.welcome.Bundle#CTL_GotoBlogAction"/>
+-                <attr name="instanceCreate" methodvalue="org.openide.awt.Actions.alwaysEnabled"/>
+-                <attr name="iconBase" stringvalue="com/paterva/maltego/welcome/resources/Blog.png"/>
+-                <attr name="noIconInMenu" boolvalue="false"/>
+-            </file>
+-            <file name="com-paterva-maltego-welcome-login-LoginAction.instance">
+-                <attr name="delegate" newvalue="com.paterva.maltego.welcome.login.LoginAction"/>
+-                <attr name="displayName" bundlevalue="com.paterva.maltego.welcome.login.Bundle#CTL_LoginAction"/>
+-                <attr name="instanceCreate" methodvalue="org.openide.awt.Actions.alwaysEnabled"/>
+-                <attr name="noIconInMenu" boolvalue="false"/>
+-                <attr name="iconBase" stringvalue="com/paterva/maltego/welcome/login/Keys.png"/>
+-            </file>
+             <file name="com-paterva-maltego-welcome-about-AboutBoxAction.instance"/>
+         </folder>
+         <folder name="Window">
+@@ -83,31 +41,6 @@
+                 <attr name="displayName" bundlevalue="com.paterva.maltego.welcome.Bundle#MoreAboutMaltego"/>
+                 <attr name="position" intvalue="1000"/>
+                 <attr name="iconBase" stringvalue="com/paterva/maltego/welcome/resources/Maltego.png"/>
+-                <file name="com-paterva-maltego-welcome-GotoUserGuideAction.shadow">
+-                    <attr name="originalFile" stringvalue="Actions/Help/com-paterva-maltego-welcome-GotoUserGuideAction.instance"/>
+-                   <!-- <attr name="description" stringvalue="The online user guide explains how to use Maltego effectively"/> -->
+-                    <attr name="position" intvalue="100"/>
+-                </file>
+-                <file name="com-paterva-maltego-welcome-GotoTechSupportAction.shadow">
+-                    <attr name="originalFile" stringvalue="Actions/Help/com-paterva-maltego-welcome-GotoTechSupportAction.instance"/>
+-                  <!--  <attr name="description" stringvalue="Ask our staff for help if you have any problems with Maltego"/> -->
+-                    <attr name="position" intvalue="200"/>
+-                </file>
+-                <file name="com-paterva-maltego-welcome-GotoBugsAction.shadow">
+-                    <attr name="originalFile" stringvalue="Actions/Help/com-paterva-maltego-welcome-GotoBugsAction.instance"/>
+-                 <!--   <attr name="description" stringvalue="If something doesn't work as advertised, we'd like to know about it"/> -->
+-                    <attr name="position" intvalue="300"/>
+-                </file>
+-                <file name="com-paterva-maltego-welcome-GotoMailingListAction.shadow">
+-                    <attr name="originalFile" stringvalue="Actions/Help/com-paterva-maltego-welcome-GotoMailingListAction.instance"/>
+-               <!--     <attr name="description" stringvalue="Stay up to date with announcements regarding Maltego"/> -->
+-                    <attr name="position" intvalue="400"/>
+-                </file>
+-                <file name="com-paterva-maltego-welcome-GotoBlogAction.shadow">
+-                    <attr name="originalFile" stringvalue="Actions/Help/com-paterva-maltego-welcome-GotoBlogAction.instance"/>
+-                 <!--   <attr name="description" stringvalue="Here you can find examples, new developments and case studies"/> -->
+-                    <attr name="position" intvalue="500"/>
+-                </file>
+                 <file name="com-paterva-maltego-welcome-about-AboutBoxAction.shadow">
+                     <attr name="originalFile" stringvalue="Actions/Help/com-paterva-maltego-welcome-about-AboutBoxAction.instance"/>
+                     <attr name="iconBase" stringvalue="com/paterva/maltego/welcome/resources/Maltego.png"/>
+@@ -140,11 +73,6 @@
+                 <attr name="iconBase" stringvalue="com/paterva/maltego/welcome/resources/Options.png"/>
+             </file>
+         </folder>
+-        <folder name="HelpButton">
+-            <file name="com-paterva-maltego-welcome-GotoUserGuideAction.shadow">
+-                <attr name="originalFile" stringvalue="Actions/Help/com-paterva-maltego-welcome-GotoUserGuideAction.instance"/>
+-            </file>
+-        </folder>
+ 
+         <folder name="TaskPanes">
+ 

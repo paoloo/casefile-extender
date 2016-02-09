@@ -1,0 +1,19 @@
+target: org/openide/awt/HtmlBrowser$URLDisplayer.class
+--- HtmlBrowser$URLDisplayer.j.orig	2012-12-14 20:26:06.071840191 -0200
++++ HtmlBrowser$URLDisplayer.j	2012-12-14 20:26:51.699841750 -0200
+@@ -32,15 +32,8 @@
+   .limit locals 1
+   .var 0 is 'dflt' Lorg/openide/awt/HtmlBrowser$URLDisplayer; from Label13 to Label26
+   .line 914
+-  invokestatic org/openide/util/Lookup/getDefault()Lorg/openide/util/Lookup;
+-  ldc_w org/openide/awt/HtmlBrowser$URLDisplayer
+-  invokevirtual org/openide/util/Lookup/lookup(Ljava/lang/Class;)Ljava/lang/Object;
+-  checkcast org/openide/awt/HtmlBrowser$URLDisplayer
+-  astore_0
+ Label13:
+   .line 916
+-  aload_0
+-  ifnonnull Label25
+   .line 918
+   new org/openide/awt/HtmlBrowser$TrivialURLDisplayer
+   dup

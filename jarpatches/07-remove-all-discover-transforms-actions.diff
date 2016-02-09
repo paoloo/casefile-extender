@@ -1,0 +1,82 @@
+--- com/paterva/maltego/transform/finder/layer.xml.orig	2012-04-11 15:14:50.000000000 -0300
++++ com/paterva/maltego/transform/finder/layer.xml	2012-12-14 20:37:08.703862878 -0200
+@@ -1,79 +1,4 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <!DOCTYPE filesystem PUBLIC "-//NetBeans//DTD Filesystem 1.2//EN" "http://www.netbeans.org/dtds/filesystem-1_2.dtd">
+ <filesystem>
+-    <folder name="Actions">
+-        <folder name="Tools">
+-            <file name="com-paterva-maltego-transform-finder-DiscoverTransformsBasicAction.instance">
+-                <attr name="displayName" bundlevalue="com.paterva.maltego.transform.finder.Bundle#CTL_DiscoverTransformsBasicAction"/>
+-                <attr name="noIconInMenu" boolvalue="true"/>
+-            </file>
+-            <file name="com-paterva-maltego-transform-finder-DiscoverTransformsAction.instance">
+-                <attr name="displayName" bundlevalue="com.paterva.maltego.transform.finder.Bundle#CTL_DiscoverTransformsAction"/>
+-                <attr name="noIconInMenu" boolvalue="true"/>
+-            </file>
+-        </folder>
+-    </folder>
+-    <folder name="Toolbars">
+-        <folder name="Test">
+-            <file name="com-paterva-maltego-transform-finder-DiscoverTransformsBasicAction.shadow">
+-                <attr name="originalFile" stringvalue="Actions/Tools/com-paterva-maltego-transform-finder-DiscoverTransformsBasicAction.instance"/>
+-                <attr name="position" intvalue="0"/>
+-            </file>
+-        </folder>
+-    </folder>
+-    <folder name="Menu">
+-        <folder name="Tools">
+-            <file name="com-paterva-maltego-transform-finder-DiscoverTransformsBasicAction.shadow">
+-                <attr name="originalFile" stringvalue="Actions/Tools/com-paterva-maltego-transform-finder-DiscoverTransformsBasicAction.instance"/>
+-                <attr name="position" intvalue="0"/>
+-            </file>
+-        </folder>
+-    </folder>
+-
+-    <folder name="Ribbon">
+-        <folder name="TaskPanes">
+-            <folder name="Manage">
+-                <folder name="Transforms">
+-                    <folder name="New Entity Type">
+-                        <file name="com-paterva-maltego-transform-finder-DiscoverTransformsBasicAction.shadow">
+-                            <attr name="originalFile" stringvalue="Actions/Tools/com-paterva-maltego-transform-finder-DiscoverTransformsBasicAction.instance"/>
+-                            <attr name="position" intvalue="100"/>
+-                            <attr name="defaultAction" boolvalue="true"/>
+-                            <attr name="menuText" stringvalue="Discover Transforms"/>
+-                        </file>
+-                        <file name="com-paterva-maltego-transform-finder-DiscoverTransformsAction.shadow">
+-                            <attr name="originalFile" stringvalue="Actions/Tools/com-paterva-maltego-transform-finder-DiscoverTransformsAction.instance"/>
+-                            <attr name="position" intvalue="200"/>
+-                            <attr name="menuText" stringvalue="Discover Transforms (Advanced)"/>
+-                        </file>
+-                        <attr name="position" intvalue="200"/>
+-                    </folder>
+-                </folder>
+-            </folder>
+-        </folder>
+-    </folder>
+-
+-
+-    <folder name="Maltego">
+-        <folder name="StartupWizard">
+-            <file name="DiscoverySegment.instance">
+-                <attr name="instanceCreate" methodvalue="com.paterva.maltego.transform.finder.wizard.DiscoveryWizard.simplifiedSegment"/>
+-                <attr name="position" intvalue="100"/>
+-            </file>
+-        </folder>
+-        <folder name="ContextActions">
+-            <folder name="EmptyTransformPopup">
+-                <file name="com-paterva-maltego-transform-finder-DiscoverTransformsBasicAction.shadow">
+-                    <attr name="originalFile" stringvalue="Actions/Tools/com-paterva-maltego-transform-finder-DiscoverTransformsBasicAction.instance"/>
+-                    <attr name="position" intvalue="100"/>
+-                </file>
+-            </folder>
+-        </folder>
+-    </folder>
+-
+-    <folder name="Shortcuts">
+-        <file name="O-D.shadow">
+-            <attr name="originalFile" stringvalue="Actions/Tools/com-paterva-maltego-transform-finder-DiscoverTransformsAction.instance"/>
+-        </file>
+-    </folder>
+ </filesystem>

@@ -1,0 +1,20 @@
+#!/bin/bash
+if [[ $# != 2 ]]; then
+    echo "usage: $0 origdir output.jar"
+    echo
+    echo "utility for easing decompiling of the entire maltego software"
+    echo "glues all jars contained into origdir to a single output.jar" 
+    exit 1
+fi
+origdir="$1"
+output="$2"
+[[ ! -r "$origdir" ]] && echo "can't read $1" && exit 1
+[[ ! -d "$origdir" ]] && echo "not a directory: $1" && exit 1
+origdir="$(readlink -f "$origdir")"
+output="$(readlink -f "$output")"
+tmpdir="$(mktemp -d)"
+find "$origdir" -name '*.jar' -exec unzip -o '{}' -d "$tmpdir" \;
+pushd "$tmpdir" >/dev/null
+zip -9r "$output" *
+popd >/dev/null
+rm -rf "$tmpdir"

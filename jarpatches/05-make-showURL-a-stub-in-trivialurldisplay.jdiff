@@ -1,0 +1,117 @@
+target: org/openide/awt/HtmlBrowser$TrivialURLDisplayer.class
+--- HtmlBrowser$TrivialURLDisplayer.j.orig	2012-12-14 20:32:01.895852371 -0200
++++ HtmlBrowser$TrivialURLDisplayer.j	2012-12-14 20:32:47.127853920 -0200
+@@ -31,109 +31,11 @@
+ .method public showURL(Ljava/net/URL;)V
+   .limit stack 4
+   .limit locals 4
+-  .var 0 is 'this' Lorg/openide/awt/HtmlBrowser$TrivialURLDisplayer; from Label0 to Label109
+-  .var 1 is 'u' Ljava/net/URL; from Label0 to Label109
+-  .var 2 is 'browser' Lorg/openide/awt/HtmlBrowser; from Label73 to Label109
+-  .var 2 is 'd' Ljava/awt/Desktop; from Label10 to Label65
+-  .var 3 is 'frame' Ljavax/swing/JFrame; from Label86 to Label109
+-  .var 3 is 'x' Ljava/lang/Exception; from Label30 to Label65
+-Label0:
+-  .line 958
+-  invokestatic java/awt/Desktop/isDesktopSupported()Z
+-  ifeq Label65
+-  .line 959
+-  invokestatic java/awt/Desktop/getDesktop()Ljava/awt/Desktop;
+-  astore_2
+-Label10:
+-  .line 960
+-  aload_2
+-  getstatic java/awt/Desktop$Action/BROWSE Ljava/awt/Desktop$Action;
+-  invokevirtual java/awt/Desktop/isSupported(Ljava/awt/Desktop$Action;)Z
+-  ifeq Label65
+-Label20:
+-  .line 962
+-  aload_2
+-  aload_1
+-  invokevirtual java/net/URL/toURI()Ljava/net/URI;
+-  invokevirtual java/awt/Desktop/browse(Ljava/net/URI;)V
+-Label28:
+-  .line 963
++; getstatic java/lang/System/out Ljava/io/PrintStream;
++; aload_1
++; invokevirtual java/net/URL/toString()Ljava/lang/String;
++; invokevirtual java/io/PrintStream/println(Ljava/lang/String;)V
+   return
+-Label29:
+-  .line 964
+-  astore_3
+-Label30:
+-  .line 965
+-  ldc_w org/openide/awt/HtmlBrowser
+-  invokevirtual java/lang/Class/getName()Ljava/lang/String;
+-  invokestatic java/util/logging/Logger/getLogger(Ljava/lang/String;)Ljava/util/logging/Logger;
+-  getstatic java/util/logging/Level/INFO Ljava/util/logging/Level;
+-  new java/lang/StringBuilder
+-  dup
+-  invokespecial java/lang/StringBuilder/<init>()V
+-  ldc "Showing: "
+-  invokevirtual java/lang/StringBuilder/append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+-  aload_1
+-  invokevirtual java/lang/StringBuilder/append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+-  invokevirtual java/lang/StringBuilder/toString()Ljava/lang/String;
+-  aload_3
+-  invokevirtual java/util/logging/Logger/log(Ljava/util/logging/Level;Ljava/lang/String;Ljava/lang/Throwable;)V
+-Label65:
+-  .line 971
+-  new org/openide/awt/HtmlBrowser
+-  dup
+-  invokespecial org/openide/awt/HtmlBrowser/<init>()V
+-  astore_2
+-Label73:
+-  .line 972
+-  aload_2
+-  aload_1
+-  invokevirtual org/openide/awt/HtmlBrowser/setURL(Ljava/net/URL;)V
+-  .line 974
+-  new javax/swing/JFrame
+-  dup
+-  invokespecial javax/swing/JFrame/<init>()V
+-  astore_3
+-Label86:
+-  .line 975
+-  aload_3
+-  iconst_2
+-  invokevirtual javax/swing/JFrame/setDefaultCloseOperation(I)V
+-  .line 976
+-  aload_3
+-  invokevirtual javax/swing/JFrame/getContentPane()Ljava/awt/Container;
+-  aload_2
+-  invokevirtual java/awt/Container/add(Ljava/awt/Component;)Ljava/awt/Component;
+-  pop
+-  .line 977
+-  aload_3
+-  invokevirtual javax/swing/JFrame/pack()V
+-  .line 978
+-  aload_3
+-  iconst_1
+-  invokevirtual javax/swing/JFrame/setVisible(Z)V
+-Label109:
+-  .line 979
+-  return
+-  .catch java/lang/Exception from Label20 to Label28 using Label29
+-  ; full_frame (frameNumber = 0)
+-  ; frame_type = 255, offset_delta = 29
+-  ; frame bytes: 255 0 29 0 3 7 0 53 7 0 54 7 0 55 0 1 7 0 56 
+-  .stack 
+-    offset 29
+-    locals Object org/openide/awt/HtmlBrowser$TrivialURLDisplayer
+-    locals Object java/net/URL
+-    locals Object java/awt/Desktop
+-    stack Object java/lang/Exception
+-    .end stack
+-  ; chop_frame (frameNumber = 1)
+-  ; frame_type = 250, offset_delta = 35
+-  ; frame bytes: 250 0 35 
+-  .stack 
+-    offset 65
+-    locals Object org/openide/awt/HtmlBrowser$TrivialURLDisplayer
+-    locals Object java/net/URL
+-    .end stack
+ .end method
+ 
+ 
