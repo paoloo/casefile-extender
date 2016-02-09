@@ -45,7 +45,8 @@ For that, I've put all modifications in .diff, .jdiff or .java where .diff is ap
 
 ## Instructions:
  * Run cfpatch:
-    ./cfpatch maltego-3.1.1_CE-2012-04-11.zip maltego-CF.1.0.1_community-2012-03-14.zip CF-custom.zip
+
+    ```./cfpatch maltego-3.1.1_CE-2012-04-11.zip maltego-CF.1.0.1_community-2012-03-14.zip CF-custom.zip```
 
  * Extact CF-custom.zip to the place where you want to install the custom CaseFile.
 
